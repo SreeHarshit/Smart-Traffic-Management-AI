@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Traffic Management AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="title-area">
+
+            <img src="{{ url_for('static', filename='logo.png') }}"
+                 class="logo"
+                 alt="Logo">
+
+            <div>
+
+                <h1>SMART TRAFFIC MANAGEMENT AI</h1>
+
+                <p>
+                    AI-Based Intelligent Traffic Control System
+                </p>
+
+            </div>
+
+        </div>
+
+        <div id="clock"></div>
+
+    </header>
+
+
+    <!-- ================= CONTROLS ================= -->
+
+    <section class="controls">
+
+        <div>
+
+            <label>Select Demo</label>
+
+            <select id="demo">
+
+                <option value="Traffic">
+                    Traffic
+                </option>
+
+                <option value="Ambulance">
+                    Ambulance
+                </option>
+
+            </select>
+
+        </div>
+
+        <button onclick="changeDemo()">
+
+            ▶ START DEMO
+
+        </button>
+
+        <div class="status">
+
+            <span class="dot"></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LIVE CAMERA ================= -->
+
+    <main>
+
+        <section class="video-card">
+
+            <div class="card-title">
+
+                LIVE CAMERA
+
+            </div>
+
+            <img id="video"
+                 src="{{ url_for('video') }}">
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= KPI CARDS ================= -->
+
+    <section class="analytics-container">
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h2 id="totalVehicles">0</h2>
+
+                <p>Total Vehicles</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="violations">0</h2>
+
+                <p>Violations</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="emergency">0</h2>
+
+                <p>Emergency Vehicles</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CHARTS ================= -->
+
+        <div class="chart-grid">
+
+            <div class="chart-card">
+
+                <h3>Vehicle Distribution</h3>
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h3>Vehicle Count</h3>
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <h3>Traffic Trend</h3>
+
+            <canvas id="lineChart"></canvas>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        Smart Traffic Management AI • Final Year Project
+
+    </footer>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<script src="{{ url_for('static', filename='analytics.js') }}"></script>
+
+</body>
+
+</html>
