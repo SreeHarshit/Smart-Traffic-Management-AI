@@ -101,30 +101,6 @@ http://127.0.0.1:5000
 
 ---
 
-## 📸 Screenshots
-
-### Home Dashboard
-
-![Home Dashboard](screenshots/home-dashboard.png)
-
-### Vehicle Detection
-
-![Vehicle Detection](screenshots/vehicle-detection.png)
-
-### Analytics Dashboard
-
-![Analytics Dashboard](screenshots/analytics-dashboard.png)
-
-### Emergency Vehicle Detection
-
-![Emergency Detection](screenshots/emergency-detection.png)
-
-### Red-Light Violation Detection
-
-![Violation Detection](screenshots/red-light-violation.png)
-
----
-
 ## 🚀 Future Enhancements
 
 - Live CCTV camera integration
